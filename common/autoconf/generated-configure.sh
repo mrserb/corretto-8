@@ -5047,7 +5047,7 @@ VS_TOOLSET_SUPPORTED_2022=true
 #CUSTOM_AUTOCONF_INCLUDE
 
 # Do not change or remove the following line, it is needed for consistency checks:
-DATE_WHEN_GENERATED=1710381622
+DATE_WHEN_GENERATED=1705630975
 
 ###############################################################################
 #
@@ -29313,11 +29313,6 @@ fi
 
     if test -z "$XCODEBUILD"; then
       as_fn_error $? "The xcodebuild tool was not found, the Xcode command line tools are required to build on Mac OS X" "$LINENO" 5
-    fi
-
-    # Fail-fast: verify we're building on a supported Xcode version
-    if test "${XCODE_MAJOR_VERSION}" -ne 6 -a "${XCODE_MAJOR_VERSION}" -lt 9 ; then
-      as_fn_error $? "Xcode 6, or 9+ is required to build JDK 8, the version found was $XCODE_MAJOR_VERSION. Use --with-xcode-path to specify the location of Xcode or make Xcode active by using xcode-select." "$LINENO" 5
     fi
 
     # Some versions of Xcode command line tools install gcc and g++ as symlinks to
@@ -61616,5 +61611,3 @@ fi
       printf "\n"
     fi
   fi
-
-
