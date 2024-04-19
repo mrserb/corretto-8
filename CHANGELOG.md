@@ -2,6 +2,44 @@
 
 The following sections describe the changes for each release of Amazon Corretto 8.
 
+## Corretto version: 8.412.08.1
+Release Date: April 16, 2024
+
+**Target Platforms <sup>1</sup>**
+
++ RPM-based Linux using glibc 2.12 or later, x86_64
++ Debian-based Linux using glibc 2.12 or later, x86_64
++ RPM-based Linux using glibc 2.17 or later, aarch64
++ Debian-based Linux using glibc 2.17 or later, aarch64
++ Alpine-based Linux, x86_64
++ Alpine-based Linux, aarch64
++ Windows 10 or later, x86, x86_64
++ macOS 12.0 and later, x86_64
++ macOS 12.0 and later, aarch64
+
+**1.** This is the platform targeted by the build. See [Using Amazon Corretto](https://aws.amazon.com/corretto/faqs/#Using_Amazon_Corretto)
+in the Amazon Corretto FAQ for supported platforms
+
+The following issues are addressed in 8.412.08.1:
+
+| Issue Name          | Platform | Description                                                          | Link                                                                       |
+|---------------------|----------|----------------------------------------------------------------------|----------------------------------------------------------------------------|
+| Import jdk8u412-b08 | All      | Updates Corretto baseline to OpenJDK 8u412-b08                       | [jdk8u412-b08](https://github.com/openjdk/jdk8u/releases/tag/jdk8u412-b08) |
+| Backport 8296654    | macOS    | [macos] Crash when launching JavaFX app with JDK that targets SDK 13 | [8296654](https://bugs.openjdk.org/browse/JDK-8296654)                     |
+
+The following CVEs are addressed in 8.412.08.1:
+
+| CVE            | CVSS | Component             |
+|----------------|------|-----------------------|
+| CVE-2024-21011 | 3.7  | hotspot/runtime       |
+| CVE-2024-21068 | 3.7  | hotspot/compiler      |
+| CVE-2024-21085 | 3.7  | core-libs/java.util   |
+| CVE-2024-21094 | 3.7  | hotspot/compiler      |
+| CVE-2024-21002 | 2.5  | javafx/graphics       |
+| CVE-2024-21003 | 3.1  | javafx/graphics       |
+| CVE-2024-21004 | 2.5  | javafx/window-toolkit |
+| CVE-2024-21005 | 3.1  | javafx/graphics       |
+
 ## Corretto version: 8.402.08.1
 Release Date: January 19, 2024
  
