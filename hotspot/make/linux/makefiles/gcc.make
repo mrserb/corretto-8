@@ -217,7 +217,7 @@ ifeq ($(USE_CLANG), true)
   WARNINGS_ARE_ERRORS += -Wno-return-type -Wno-empty-body
 endif
 
-WARNING_FLAGS = -Wpointer-arith -Wsign-compare -Wundef -Wunused-function -Wunused-value -Wformat=2 -Wreturn-type
+WARNING_FLAGS = -Wpointer-arith -Wsign-compare -Wundef -Wunused-function -Wunused-value -Wformat=2 -Wreturn-type -Woverloaded-virtual
 
 ifeq ($(USE_CLANG),)
   # AL2022 has GCC 11.3.1 and also has stricter checks. Disabling until code fixes can be backported.
