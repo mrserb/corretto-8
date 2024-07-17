@@ -2,6 +2,47 @@
 
 The following sections describe the changes for each release of Amazon Corretto 8.
 
+## Corretto version: 8.422.05.1
+Release Date: July 16, 2024
+
+**Target Platforms <sup>1</sup>**
+
++ RPM-based Linux using glibc 2.12 or later, x86_64
++ Debian-based Linux using glibc 2.12 or later, x86_64
++ RPM-based Linux using glibc 2.17 or later, aarch64
++ Debian-based Linux using glibc 2.17 or later, aarch64
++ Alpine-based Linux, x86_64
++ Alpine-based Linux, aarch64
++ Windows 10 or later, x86, x86_64
++ macOS 12.0 and later, x86_64
++ macOS 12.0 and later, aarch64
+
+**1.** This is the platform targeted by the build. See [Using Amazon Corretto](https://aws.amazon.com/corretto/faqs/#Using_Amazon_Corretto)
+in the Amazon Corretto FAQ for supported platforms
+
+The following issues are addressed in 8.422.05.1:
+
+| Issue Name          | Platform | Description                                                          | Link                                                                       |
+|---------------------|----------|----------------------------------------------------------------------|----------------------------------------------------------------------------|
+| Import jdk8u422-b05 | All      | Updates Corretto baseline to OpenJDK 8u422-b05                       | [jdk8u422-b05](https://github.com/openjdk/jdk8u/releases/tag/jdk8u422-b05) |
+| Restore the default behavior of UnixNativeDispatcher.c | All | Aligns behavior of `java.nio.Files.readAttributes()` in Corretto with other OpenJDK distributions | Increases preicision of `java.nio.Files.readAttributes()` from seconds to milliseconds, see [#508](https://github.com/corretto/corretto-8/issues/508) |
+| JDK-8299677 | All | `Formatter.format` might take a long time to format an integer or floating-point | [JDK-8299677](bugs.openjdk.org/browse/JDK-8299677) | 
+| JDK-8329705 | JavaFX for Windows, macOS (x64) | Add missing Application thread checks to platform specific a11y methods | [JDK-8329705](https://bugs.openjdk.org/browse/JDK-8329705) |
+| JDK-8318854 | macOS | Resolves a warning when running AWT apps on macOS 14 | [JDK-8318854](https://bugs.openjdk.org/browse/JDK-8318854) |
+| JDK-8319669 | JavaFX for macOS | Resolves a warning when running AWT JavaFX apps on macOS 14 | [JDK-8319669](https://bugs.openjdk.org/browse/JDK-8319669)
+
+
+The following CVEs are addressed in 8.422.05.1:
+
+| CVE            | CVSS | Component             |
+|----------------|------|-----------------------|
+| CVE-2024-21147 | 7.4  | hotspot/compiler      |
+| CVE-2024-21145 | 4.8  | client-libs/2d        |
+| CVE-2024-21140 | 4.8  | hotspot/compiler      |
+| CVE-2024-21144 | 3.7  | core-libs/java.util   |
+| CVE-2024-21131 | 3.7  | hotspot/runtime       |
+| CVE-2024-21138 | 3.7  | hotspot/runtime       |
+
 ## Corretto version: 8.412.08.1
 Release Date: April 16, 2024
 
